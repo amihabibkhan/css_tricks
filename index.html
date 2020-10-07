@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup {
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.75);
+            text-align: center;
+        }
+        .f-in {
+            transition: visibility 1s linear 100ms, opacity 100ms;
+            visibility: visible !important;
+            opacity: 1;
+        }
+        .popup:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            margin-right: -4px;
+            vertical-align: middle;
+        }
+        .loader { 
+            width: 70px;
+            height: 70px;
+            background: none;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            border-top: 10px solid #ED018C;
+            border-bottom: 10px solid #FC8A1A;
+            border-left: 10px solid #01AFF1;
+            border-right: 10px solid #00A650;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .popup-inner {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            max-width: 90%; 
+            text-align: center;
+        }
+        .loader:after {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #fff;
+            height: 30px;
+            width: 30px;
+            content: "";
+            border-radius: 50%;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+        } 
+    </style>
+</head>
+<body>
+    <div class="popup" id="popup">
+        <div class="loader popup-inner"> 
+        </div>
+    </div>
+    <button onclick="spinit()">Spin Now</button>
+<script>
+    function spinit(){
+        var myElement = document.getElementById('popup');
+        myElement.classList.add('f-in')
+    }
+</script>
+</body>
+</html>
