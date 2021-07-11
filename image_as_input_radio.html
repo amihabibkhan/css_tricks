@@ -1,0 +1,97 @@
+<style>
+  .check_icon{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .check_icon label{
+      margin-right: 10px;
+      text-align: center;
+      padding: 10px 0;
+  }
+  .check_icon label i{
+      font-size: 30px;
+      background-color: rgb(241 241 241);
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      color: black;
+  }
+  /* HIDE RADIO */
+  [type=radio] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
+
+  /* IMAGE STYLES */
+  [type=radio] + i {
+      cursor: pointer;
+  }
+
+  /* CHECKED STYLES */
+  [type=radio]:checked + i {
+      border: 2px solid #32c861;
+      background-color: white;
+  }
+</style>
+
+<div class="check_icon">
+    <label>
+        <input type="radio" name="icon" value="flaticon-guide">
+        <i class="flaticon-guide"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-quran">
+        <i class="flaticon-quran"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-school">
+        <i class="flaticon-school"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-college">
+        <i class="flaticon-college"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-education">
+        <i class="flaticon-education"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-technical-support">
+        <i class="flaticon-technical-support"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-architect">
+        <i class="flaticon-architect"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-technology">
+        <i class="flaticon-technology"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-medical-book">
+        <i class="flaticon-medical-book"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-book">
+        <i class="flaticon-book"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-open-book">
+        <i class="flaticon-open-book"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-stationary">
+        <i class="flaticon-stationary"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-gift">
+        <i class="flaticon-gift"></i>
+    </label>
+    <label>
+        <input type="radio" name="icon" value="flaticon-trophy">
+        <i class="flaticon-trophy"></i>
+    </label>
+</div>
